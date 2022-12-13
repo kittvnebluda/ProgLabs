@@ -6,6 +6,8 @@ public abstract class Human {
 
     private Fear fear = Fear.ZERO;
 
+    private String name;
+
     public Fear getFear() {
         return fear;
     }
@@ -14,12 +16,16 @@ public abstract class Human {
         this.fear = fear;
     }
 
-    private class Legs extends HumanBodyPart{
-
+    public String getName() {
+        return name;
     }
-    private class Arms extends HumanBodyPart{
 
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public class Legs extends HumanBodyPart{}
+    public class Arms extends HumanBodyPart{}
 
     abstract public void tremble();
     abstract public void sight();

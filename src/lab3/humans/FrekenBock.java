@@ -13,8 +13,8 @@ public class FrekenBock extends Human {
         System.out.println("Фрекен Бок мрачно посмотрела");
     }
 
-    @Override
-    public void move() {
-
+    public FrekenBock() {
+        setName("Фрекен Бок");
+        legs.setDressed(false);
     }
 }
