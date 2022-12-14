@@ -8,6 +8,12 @@ public abstract class Human {
 
     private String name;
 
+    private Env env;
+
+    public Human(String name) {
+        setName(name);
+    }
+
     public Fear getFear() {
         return fear;
     }
@@ -22,6 +28,20 @@ public abstract class Human {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Env where() {
+        return env;
+    }
+
+    public void move(Env env) {
+        this.env = env;
+    }
+
+    public void explore() {
+        if(env != null) {
+            env.touch(this);
+        } else System.out.println(name + " находится в пустоте. Ее нельзя постичь");
     }
 
     public class Legs extends HumanBodyPart{}

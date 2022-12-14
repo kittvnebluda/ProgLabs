@@ -5,10 +5,8 @@ import java.util.Random;
 
 public abstract class Env {
     private Env[] env = {};
-    private Human human0;
-    private Human human1;
 
-    private String name = "Какая-то странная среда";
+    private String name;
 
     public Env(String name) { setName(name);}
     public Env(String name, Env[] env) {
@@ -33,26 +31,6 @@ public abstract class Env {
         return null;
     }
 
-    public boolean addHuman(Human h) {
-        if(human0 == null) human0 = h;
-        else if(human1 == null) human1 = h;
-        else return false;
-        return true;
-    }
-
-    public boolean removeHuman(Human h) {
-        if(human0 == h) {
-            human0 = null;
-            return true;
-        } else if(human1 == h) {
-            human1 = null;
-            return true;
-        }
-        return false;
-    }
-
-    public Human[] getHumans() { return new Human[] {human0, human1}; }
-
     public String getName() {
         return name;
     }
@@ -61,11 +39,11 @@ public abstract class Env {
         this.name = name;
     }
 
-    public void touchEnv() {
+    public void touchEnv(Human h) {
         for (Env e: getEnv()) {
-            e.touch();
+            e.touch(h);
         }
     }
 
-    abstract public void touch();
+    abstract public void touch(Human h);
 }

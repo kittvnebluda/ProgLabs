@@ -1,6 +1,7 @@
 package lab3.env;
 
 import lab3.Env;
+import lab3.Human;
 
 public class Bell extends Env {
     public Bell(String name) {
@@ -8,7 +9,7 @@ public class Bell extends Env {
     }
 
     @Override
-    public void touch() {
-        System.out.println("Колокольчик зазвенел");
+    public void touch(Human h) {
+        System.out.println(h.getName() + " тронул(а) колокольчик, и он зазвенел");
     }
 }
