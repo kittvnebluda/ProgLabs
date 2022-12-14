@@ -1,8 +1,6 @@
 package lab3;
 
-import java.util.Objects;
-
-public abstract class Human implements Creature{
+public abstract class Human implements CreatureSeeing, CreatureTrembling, CreatureMoving{
     public Legs legs = new Legs();
     public Arms arms = new Arms();
 
@@ -32,10 +30,11 @@ public abstract class Human implements Creature{
         this.name = name;
     }
 
-    public Env where() {
+    public Env getEnv() {
         return env;
     }
 
+    @Override
     public void move(Env env) {
         this.env = env;
     }

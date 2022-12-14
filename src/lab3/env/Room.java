@@ -1,43 +1,36 @@
 package lab3.env;
 
-import lab3.Env;
-import lab3.Human;
-import lab3.Room;
+import lab3.*;
 
 import java.util.Random;
 
-public class Room00 extends Env implements Room {
+public class Room extends Env implements EnvInput, EnvOutput, EnvSimulating {
     public Human[] humans;
 
-    public Room00(String name, Env[] env, Human ... humans) {
+    public Room(String name, Env[] env, Human ... humans) {
         super(name, env);
         this.humans = humans;
     }
 
     @Override
-    public void moveHuman(Human h, Env env) {
-        h.move(env);
-    }
-
-    @Override
-    public void enter(Human h) {
+    public void enter(CreatureMoving c) {
         Env door = find("Входная дверь");
 
         if (door instanceof Door) {
             ((Door)door).open();
-            moveHuman(h, this);
+            c.move(this);
             ((Door)door).close();
 
         } else System.out.println("Входная дверь не найдена");
     }
 
     @Override
-    public void leave(Human h) {
+    public void leave(CreatureMoving c) {
         Env door = find("Входная дверь");
 
         if (door instanceof Door) {
             ((Door)door).open();
-            moveHuman(h, null);
+            c.move(null);
             ((Door)door).close();
 
         } else System.out.println("Входная дверь не найдена");
@@ -69,7 +62,7 @@ public class Room00 extends Env implements Room {
                 // перемещаем человека и активируем среду
                 if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) rHuman.explore();
                 else {
-                    moveHuman(rHuman, rEnv);
+                    rHuman.move(rEnv);
                     rHuman.explore();
                 }
                 separate();

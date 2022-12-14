@@ -29,7 +29,7 @@ public class FrekenBock extends Human {
 
     @Override
     public void explore() {
-        if(where() != null) {
+        if(getEnv() != null) {
             if (legs.isBroken()) {
                 if (Math.random() > .8) restoreLegs();
                 else System.out.println(getName() + " не смог(ла) восстановить ноги");
@@ -37,9 +37,9 @@ public class FrekenBock extends Human {
                 if (Math.random() > .8) restoreArms();
                 else System.out.println(getName() + " не смог(ла) восстановить руки");
             } else {
-                where().touch(this);
+                getEnv().touch(this);
 
-                if(where() instanceof Cord) {
+                if(getEnv() instanceof Cord) {
                     System.out.println("Шнуры опасны");
                     breakArms();
                 } else {

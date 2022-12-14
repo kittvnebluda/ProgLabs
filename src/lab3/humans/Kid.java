@@ -33,7 +33,7 @@ public class Kid extends Human {
 
     @Override
     public void explore() {
-        if(where() != null) {
+        if(getEnv() != null) {
             if (legs.isBroken()) {
                 if (Math.random() > .5) restoreLegs();
                 else System.out.println(getName() + " не смог(ла) восстановить ноги");
@@ -41,14 +41,14 @@ public class Kid extends Human {
                 if (Math.random() > .5) restoreArms();
                 else System.out.println(getName() + " не смог(ла) восстановить руки");
             } else {
-                where().touch(this);
+                getEnv().touch(this);
 
-                if(where() instanceof Window) {
-                    if(((Window)where()).getCurtain() == CurtainState.OPENED) {
+                if(getEnv() instanceof Window) {
+                    if(((Window) getEnv()).getCurtain() == CurtainState.OPENED) {
                         System.out.println("Малыш посмотрел в окно");
                         sight();
                     }
-                } else if(where() instanceof Cord) {
+                } else if(getEnv() instanceof Cord) {
                     System.out.println("Шнуры опасны");
                     breakArms();
                 } else {
