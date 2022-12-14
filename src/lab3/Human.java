@@ -1,6 +1,8 @@
 package lab3;
 
-public abstract class Human {
+import java.util.Objects;
+
+public abstract class Human implements Creature{
     public Legs legs = new Legs();
     public Arms arms = new Arms();
 
@@ -59,6 +61,41 @@ public abstract class Human {
         System.out.println(getName() + " восстановил(а) руки");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Human human = (Human) o;
+
+        if (!legs.equals(human.legs)) return false;
+        if (!arms.equals(human.arms)) return false;
+        if (fear != human.fear) return false;
+        if (!name.equals(human.name)) return false;
+        return env.equals(human.env);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = legs.hashCode();
+        result = 31 * result + arms.hashCode();
+        result = 31 * result + fear.hashCode();
+        result = 31 * result + name.hashCode();
+        result = 31 * result + env.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "legs=" + legs +
+                ", arms=" + arms +
+                ", fear=" + fear +
+                ", name='" + name + '\'' +
+                ", env=" + env +
+                '}';
+    }
+
     public class Legs extends HumanBodyPart{
         public Legs() {
             super("Ноги");
@@ -69,9 +106,4 @@ public abstract class Human {
             super("Руки");
         }
     }
-
-    abstract public void tremble();
-    abstract public void sight();
-    abstract public void explore();
-
 }

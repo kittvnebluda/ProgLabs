@@ -50,34 +50,35 @@ public class Room00 extends Env implements Room {
         find().touch(h);
     }
 
-    private void sleep() throws InterruptedException {
+    private void separate() {
         System.out.println("-------------------------------");
-        Thread.sleep(5000);
     }
 
-    public void simulate(int steps) throws InterruptedException {
-        // запускаем людей в комнату
-        for (Human h: humans) {
-            enter(h);
-            sleep();
-        }
-        for (int i = 0; i < steps; i++) {
-            // получаем случайную среду и случайного человека
-            Env rEnv = find();
-            Human rHuman = humans[new Random().nextInt(humans.length)];
-
-            // перемещаем человека и активируем среду
-            if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) rHuman.explore();
-            else {
-                moveHuman(rHuman, rEnv);
-                rHuman.explore();
+    public void simulate(int steps) {
+        if (find("Входная дверь") != null) {
+            // запускаем людей в комнату
+            for (Human h: humans) {
+                enter(h);
+                separate();
             }
-            sleep();
-        }
-        // выпускаем людей из комнаты
-        for (Human h: humans) {
-            leave(h);
-            sleep();
-        }
+            for (int i = 0; i < steps; i++) {
+                // получаем случайную среду и случайного человека
+                Env rEnv = find();
+                Human rHuman = humans[new Random().nextInt(humans.length)];
+
+                // перемещаем человека и активируем среду
+                if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) rHuman.explore();
+                else {
+                    moveHuman(rHuman, rEnv);
+                    rHuman.explore();
+                }
+                separate();
+            }
+            // выпускаем людей из комнаты
+            for (Human h: humans) {
+                leave(h);
+                separate();
+            }
+        } else System.out.println("Комната должна содержать входную дверь");
     }
 }

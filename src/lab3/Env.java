@@ -1,5 +1,6 @@
 package lab3;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Random;
 
@@ -41,6 +42,30 @@ public abstract class Env {
         for (Env e: getEnv()) {
             e.touch(h);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Env env1)) return false;
+
+        if (!Arrays.equals(env, env1.env)) return false;
+        return name.equals(env1.name);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Arrays.hashCode(env);
+        result = 31 * result + name.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Env{" +
+                "env=" + Arrays.toString(env) +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     abstract public void touch(Human h);
