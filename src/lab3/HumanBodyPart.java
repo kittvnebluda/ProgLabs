@@ -1,22 +1,24 @@
 package lab3;
 
 public abstract class HumanBodyPart {
-    private Cleanliness condition = Cleanliness.CLEAN;
-    private boolean isDressed = true;
+    private String name;
+    private boolean isBroken = false;
 
-    public Cleanliness getCondition() {
-        return condition;
+    public HumanBodyPart(String name) {setName(name);}
+
+    public boolean isBroken() {
+        return isBroken;
     }
 
-    public void setCondition(Cleanliness condition) {
-        this.condition = condition;
+    public void setBroken(boolean broken) {
+        isBroken = broken;
     }
 
-    public boolean isDressed() {
-        return isDressed;
+    public String getName() {
+        return name;
     }
 
-    public void setDressed(boolean dressed) {
-        isDressed = dressed;
+    public void setName(String name) {
+        this.name = name;
     }
 }

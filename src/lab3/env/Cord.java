@@ -10,6 +10,7 @@ public class Cord extends Env {
 
     @Override
     public void touch(Human h) {
+        System.out.println(h.getName() + " потянул за " + getName());
         touchEnv(h);
     }
 }

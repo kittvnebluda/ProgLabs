@@ -45,7 +45,8 @@ public class Room00 extends Env implements Room {
 
     @Override
     public void touch(Human h) {
-        System.out.println(h.getName() + " зачем-то прикоснулся к комнате\nКомната сочла это приятным и возбудилась");
+        System.out.println(h.getName() +
+                " зачем-то прикоснулся к комнате\nКомната сочла это приятным и возбудилась");
         find().touch(h);
     }
 
@@ -66,11 +67,14 @@ public class Room00 extends Env implements Room {
             Human rHuman = humans[new Random().nextInt(humans.length)];
 
             // перемещаем человека и активируем среду
-            moveHuman(rHuman, rEnv);
-            rHuman.explore();
+            if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) rHuman.explore();
+            else {
+                moveHuman(rHuman, rEnv);
+                rHuman.explore();
+            }
             sleep();
         }
-        // выпускаем людей из комнату
+        // выпускаем людей из комнаты
         for (Human h: humans) {
             leave(h);
             sleep();
