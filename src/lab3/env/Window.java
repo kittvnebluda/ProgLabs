@@ -24,15 +24,15 @@ public class Window extends Env {
         switch (curtain) {
             case CLOSED -> {
                 setCurtain(CurtainState.OPENED);
-                System.out.printf("%s: %s открыл шторы\n", getName(), h.getName());
+                System.out.printf("%s: %s открыл(а) шторы\n", getName(), h.getName());
             }
             case OPENED -> {
                 setCurtain(CurtainState.CLOSED);
-                System.out.printf("%s: %s закрыл шторы\n", getName(), h.getName());
+                System.out.printf("%s: %s закрыл(а) шторы\n", getName(), h.getName());
             }
             case NOT_WORKING -> {
                 setCurtain(CurtainState.OPENED);
-                System.out.printf("%s: %s починил шторы\n", getName(), h.getName());
+                System.out.printf("%s: %s починил(а) шторы\n", getName(), h.getName());
             }
         }
         if (Math.random() > 0.7f) {

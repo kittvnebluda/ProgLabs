@@ -21,13 +21,11 @@ public abstract class Env {
     }
 
     public Env find(){
-        int r = new Random().nextInt(env.length - 1);
+        int r = new Random().nextInt(env.length);
         return env[r];
     }
     public Env find(String name){
-        for (Env env: getEnv()) {
-            if(Objects.equals(env.getName(), name)) return env;
-        }
+        for (Env env: getEnv()) if(Objects.equals(env.getName(), name)) return env;
         return null;
     }
 

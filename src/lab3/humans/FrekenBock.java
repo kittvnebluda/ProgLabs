@@ -1,7 +1,9 @@
 package lab3.humans;
 
 import lab3.Env;
+import lab3.Fear;
 import lab3.Human;
+import lab3.env.Cord;
 
 public class FrekenBock extends Human {
     @Override
@@ -16,7 +18,6 @@ public class FrekenBock extends Human {
 
     public FrekenBock() {
         super("Фрекен Бок");
-        legs.setDressed(false);
     }
 
     @Override
@@ -24,5 +25,34 @@ public class FrekenBock extends Human {
         super.move(env);
         if(env != null) System.out.println(getName() + " переместилась к " + env.getName());
         else System.out.println(getName() + " переместилась в пустоту");
+    }
+
+    @Override
+    public void explore() {
+        if(where() != null) {
+            if (legs.isBroken()) {
+                if (Math.random() > .8) restoreLegs();
+                else System.out.println(getName() + " не смог(ла) восстановить ноги");
+            } else if (arms.isBroken()) {
+                if (Math.random() > .8) restoreArms();
+                else System.out.println(getName() + " не смог(ла) восстановить руки");
+            } else {
+                where().touch(this);
+
+                if(where() instanceof Cord) {
+                    System.out.println("Шнуры опасны");
+                    breakArms();
+                } else {
+                    if (Math.random() > .8) {
+                        breakLegs();
+                    }
+                }
+
+                if (getFear() != Fear.ZERO) {
+                    setFear(Fear.ZERO);
+                    System.out.println("Фрекен Бок успокоилась");
+                }
+            }
+        } else System.out.println("Фрекен Бок находится в пустоте. Похоже ей это нравится");
     }
 }

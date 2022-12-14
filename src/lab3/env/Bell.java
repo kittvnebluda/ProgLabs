@@ -10,6 +10,6 @@ public class Bell extends Env {
 
     @Override
     public void touch(Human h) {
-        System.out.println(h.getName() + " тронул(а) колокольчик, и он зазвенел");
+        System.out.println(getName() + " зазвенел");
     }
 }

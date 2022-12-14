@@ -15,7 +15,7 @@ public class Main {
         FrekenBock frekenBock = new FrekenBock();
         Kid kid = new Kid();
 
-        Room00 room = new Room00("Комната", new Env[]{door, cord}, frekenBock, kid);
+        Room00 room = new Room00("Комната", new Env[]{door, window0, window1, cord}, frekenBock, kid);
 
         room.simulate(10);
     }

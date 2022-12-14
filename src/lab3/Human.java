@@ -38,15 +38,40 @@ public abstract class Human {
         this.env = env;
     }
 
-    public void explore() {
-        if(env != null) {
-            env.touch(this);
-        } else System.out.println(name + " находится в пустоте. Ее нельзя постичь");
+    public void breakLegs() {
+        legs.setBroken(true);
+        tremble();
+        System.out.println("Похоже " + getName() + " сломал(а) ноги");
+    }
+    public void restoreLegs() {
+        legs.setBroken(false);
+        setFear(Fear.ZERO);
+        System.out.println(getName() + " восстановил(а) ноги");
+    }
+    public void breakArms() {
+        arms.setBroken(true);
+        tremble();
+        System.out.println("Похоже " + getName() + " сломал(а) руки");
+    }
+    public void restoreArms() {
+        arms.setBroken(false);
+        setFear(Fear.ZERO);
+        System.out.println(getName() + " восстановил(а) руки");
     }
 
-    public class Legs extends HumanBodyPart{}
-    public class Arms extends HumanBodyPart{}
+    public class Legs extends HumanBodyPart{
+        public Legs() {
+            super("Ноги");
+        }
+    }
+    public class Arms extends HumanBodyPart{
+        public Arms() {
+            super("Руки");
+        }
+    }
 
     abstract public void tremble();
     abstract public void sight();
+    abstract public void explore();
+
 }
