@@ -1,14 +1,13 @@
 package lab3;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Random;
 
 public abstract class Env {
     private Env[] env = {};
-    private Human human0;
-    private Human human1;
 
-    private String name = "Какая-то странная среда";
+    private String name;
 
     public Env(String name) { setName(name);}
     public Env(String name, Env[] env) {
@@ -23,35 +22,13 @@ public abstract class Env {
     }
 
     public Env find(){
-        int r = new Random().nextInt(env.length - 1);
+        int r = new Random().nextInt(env.length);
         return env[r];
     }
     public Env find(String name){
-        for (Env env: getEnv()) {
-            if(Objects.equals(env.getName(), name)) return env;
-        }
+        for (Env env: getEnv()) if(Objects.equals(env.getName(), name)) return env;
         return null;
     }
-
-    public boolean addHuman(Human h) {
-        if(human0 == null) human0 = h;
-        else if(human1 == null) human1 = h;
-        else return false;
-        return true;
-    }
-
-    public boolean removeHuman(Human h) {
-        if(human0 == h) {
-            human0 = null;
-            return true;
-        } else if(human1 == h) {
-            human1 = null;
-            return true;
-        }
-        return false;
-    }
-
-    public Human[] getHumans() { return new Human[] {human0, human1}; }
 
     public String getName() {
         return name;
@@ -61,11 +38,35 @@ public abstract class Env {
         this.name = name;
     }
 
-    public void touchEnv() {
+    public void touchEnv(Human h) {
         for (Env e: getEnv()) {
-            e.touch();
+            e.touch(h);
         }
     }
 
-    abstract public void touch();
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Env env1)) return false;
+
+        if (!Arrays.equals(env, env1.env)) return false;
+        return name.equals(env1.name);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Arrays.hashCode(env);
+        result = 31 * result + name.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Env{" +
+                "env=" + Arrays.toString(env) +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    abstract public void touch(Human h);
 }

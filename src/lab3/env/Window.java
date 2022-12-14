@@ -2,6 +2,7 @@ package lab3.env;
 
 import lab3.CurtainState;
 import lab3.Env;
+import lab3.Human;
 
 public class Window extends Env {
     private CurtainState curtain = CurtainState.CLOSED;
@@ -19,24 +20,24 @@ public class Window extends Env {
     }
 
     @Override
-    public void touch() {
+    public void touch(Human h) {
         switch (curtain) {
             case CLOSED -> {
                 setCurtain(CurtainState.OPENED);
-                System.out.printf(getName(), "шторы открылись");
+                System.out.printf("%s: %s открыл(а) шторы\n", getName(), h.getName());
             }
             case OPENED -> {
                 setCurtain(CurtainState.CLOSED);
-                System.out.printf(getName(), "шторы закрылись");
+                System.out.printf("%s: %s закрыл(а) шторы\n", getName(), h.getName());
             }
             case NOT_WORKING -> {
                 setCurtain(CurtainState.OPENED);
-                System.out.printf(getName(), "шторы снова стали работать");
+                System.out.printf("%s: %s починил(а) шторы\n", getName(), h.getName());
             }
         }
-        if (Math.random() > 0.5f) {
+        if (Math.random() > 0.7f) {
             setCurtain(CurtainState.NOT_WORKING);
-            System.out.printf(getName(), "шторы сломались");
+            System.out.println(getName() + ": шторы сломались");
         }
     }
 }
