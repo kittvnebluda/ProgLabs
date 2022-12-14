@@ -49,29 +49,29 @@ public class Room extends Env implements EnvInput, EnvOutput, EnvSimulating {
 
     public void simulate(int steps) {
         if (find("Входная дверь") != null) {
-            // запускаем людей в комнату
-            for (Human h: humans) {
-                enter(h);
-                separate();
-            }
             for (int i = 0; i < steps; i++) {
                 // получаем случайную среду и случайного человека
                 Env rEnv = find();
                 Human rHuman = humans[new Random().nextInt(humans.length)];
 
-                // перемещаем человека и активируем среду
-                if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) rHuman.explore();
-                else {
-                    rHuman.move(rEnv);
-                    rHuman.explore();
-                }
+                if(rHuman.getEnv() != null) {
+                    // перемещаем человека и активируем среду
+                    if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) rHuman.explore();
+                    else {
+                        rHuman.move(rEnv);
+                        rHuman.explore();
+                    }
+                } else enter(rHuman);
                 separate();
             }
             // выпускаем людей из комнаты
             for (Human h: humans) {
-                leave(h);
-                separate();
+                if (h.getEnv() != null) {
+                    leave(h);
+                    separate();
+                }
             }
+
         } else System.out.println("Комната должна содержать входную дверь");
     }
 }

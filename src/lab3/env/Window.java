@@ -1,10 +1,8 @@
 package lab3.env;
 
-import lab3.CurtainState;
-import lab3.Env;
-import lab3.Human;
+import lab3.*;
 
-public class Window extends Env {
+public class Window extends Env implements EnvOutput {
     private CurtainState curtain = CurtainState.CLOSED;
 
     public Window(String name) {
@@ -25,6 +23,7 @@ public class Window extends Env {
             case CLOSED -> {
                 setCurtain(CurtainState.OPENED);
                 System.out.printf("%s: %s открыл(а) шторы\n", getName(), h.getName());
+                if (Math.random() > 0.1f) leave(h);
             }
             case OPENED -> {
                 setCurtain(CurtainState.CLOSED);
@@ -39,5 +38,13 @@ public class Window extends Env {
             setCurtain(CurtainState.NOT_WORKING);
             System.out.println(getName() + ": шторы сломались");
         }
+    }
+
+    @Override
+    public void leave(CreatureMoving c) {
+        System.out.println("Кто-то выпал из окна");
+        if (c instanceof Human) ((Human)c).breakLegs();
+        c.move(null);
+
     }
 }
