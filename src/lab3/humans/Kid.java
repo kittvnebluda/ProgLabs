@@ -1,7 +1,7 @@
 package lab3.humans;
 
 import lab3.CurtainState;
-import lab3.Env;
+import lab3.EnvPattern;
 import lab3.Fear;
 import lab3.Human;
 import lab3.env.Cord;
@@ -25,7 +25,7 @@ public class Kid extends Human {
     }
 
     @Override
-    public void move(Env env) {
+    public void move(EnvPattern env) {
         super.move(env);
         if(env != null) System.out.println(getName() + " переместился к " + env.getName());
         else System.out.println(getName() + " переместился в пустоту");

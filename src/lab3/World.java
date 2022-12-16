@@ -1,5 +1,5 @@
 package lab3;
 
-public interface EnvSimulating {
+public interface World {
     void simulate(int steps);
 }

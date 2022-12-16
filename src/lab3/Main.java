@@ -10,13 +10,13 @@ public class Main {
         Window window0 = new Window("Окно на внутренний двор");
         Window window1 = new Window("Окно на улицу");
         Bell bell = new Bell("Колокол на крыше");
-        Cord cord = new Cord("Шнут от колокола", new Env[]{bell});
+        Cord cord = new Cord("Шнут от колокола", new EnvPattern[]{bell});
 
         FrekenBock frekenBock = new FrekenBock();
         Kid kid = new Kid();
 
-        Room room = new Room("Комната", new Env[]{door, window0, window1, cord}, frekenBock, kid);
-        room.simulate(5);
+        RoomWorld roomWorld = new RoomWorld("Комната", new EnvPattern[]{door, window0, window1, cord}, frekenBock, kid);
+        roomWorld.simulate(5);
     }
 }
 

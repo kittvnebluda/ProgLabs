@@ -2,7 +2,7 @@ package lab3.env;
 
 import lab3.*;
 
-public class Window extends Env implements EnvOutput {
+public class Window extends EnvPattern implements EnvOutput {
     private CurtainState curtain = CurtainState.CLOSED;
 
     public Window(String name) {

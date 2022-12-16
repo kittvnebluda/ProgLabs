@@ -8,7 +8,7 @@ public abstract class Human implements CreatureSeeing, CreatureTrembling, Creatu
 
     private String name;
 
-    private Env env;
+    private EnvPattern env;
 
     public Human(String name) {
         setName(name);
@@ -30,12 +30,12 @@ public abstract class Human implements CreatureSeeing, CreatureTrembling, Creatu
         this.name = name;
     }
 
-    public Env getEnv() {
+    public EnvPattern getEnv() {
         return env;
     }
 
     @Override
-    public void move(Env env) {
+    public void move(EnvPattern env) {
         this.env = env;
     }
 

@@ -1,9 +1,9 @@
 package lab3.env;
 
-import lab3.Env;
+import lab3.EnvPattern;
 import lab3.Human;
 
-public class Bell extends Env {
+public class Bell extends EnvPattern {
     public Bell(String name) {
         super(name);
     }

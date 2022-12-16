@@ -1,9 +1,9 @@
 package lab3.env;
 
-import lab3.Env;
+import lab3.EnvPattern;
 import lab3.Human;
 
-public class Door extends Env {
+public class Door extends EnvPattern {
     private boolean isOpen = false;
 
     public Door(String name) {
