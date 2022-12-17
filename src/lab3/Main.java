@@ -7,15 +7,15 @@ import lab3.humans.Kid;
 public class Main {
     public static void main(String[] args) {
         Door door = new Door("Входная дверь");
-        Window window0 = new Window("Окно на внутренний двор");
-        Window window1 = new Window("Окно на улицу");
+        Window windowCourt = new Window("Окно на внутренний двор");
+        Window windowStreet = new Window("Окно на улицу");
         Bell bell = new Bell("Колокол на крыше");
         Cord cord = new Cord("Шнут от колокола", new EnvPattern[]{bell});
 
         FrekenBock frekenBock = new FrekenBock();
         Kid kid = new Kid();
 
-        RoomWorld roomWorld = new RoomWorld("Комната", new EnvPattern[]{door, window0, window1, cord}, frekenBock, kid);
+        RoomWorld roomWorld = new RoomWorld("Комната", new EnvPattern[]{door, windowCourt, windowStreet, cord}, frekenBock, kid);
         roomWorld.simulate(5);
     }
 }

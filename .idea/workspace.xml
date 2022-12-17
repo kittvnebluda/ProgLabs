@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f01ca2dc-52e1-4188-b8b8-aa952b4b4351" name="Changes" comment="Welcome new interfaces">
-      <change afterPath="$PROJECT_DIR$/src/lab3/EnvPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab3/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/CreatureMoving.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/CreatureMoving.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Env.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Env.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/EnvSimulating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Bell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Bell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Cord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Cord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/RoomWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/humans/FrekenBock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/humans/FrekenBock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/humans/Kid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/humans/Kid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/uml/lab3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/uml/lab3.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
