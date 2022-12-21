@@ -10,18 +10,16 @@ public class Main {
         Window windowCourt = new Window("Окно на внутренний двор");
         Window windowStreet = new Window("Окно на улицу");
         Bell bell = new Bell("Колокол на крыше");
-        Cord cord = new Cord("Шнут от колокола", new EnvPattern[]{bell});
+        Cord cord = new Cord("Шнут от колокола", new EnvRoom[]{bell});
 
         FrekenBock frekenBock = new FrekenBock();
         Kid kid = new Kid();
 
-        RoomWorld roomWorld = new RoomWorld("Комната", new EnvPattern[]{door, windowCourt, windowStreet, cord}, frekenBock, kid);
-        roomWorld.simulate(5);
+        RoomWorld roomWorld = new RoomWorld("Комната", new EnvRoom[]{door, windowCourt, windowStreet, cord}, frekenBock, kid);
+        roomWorld.simulate(6);
     }
 }
 
-//    отличие отнерфейсов от абстрактных классов
-//    solid
-//    настледование и реализация интерфейсов
-//    дефолтные методы в интерфейсах
-//    как связаны hashcode и equals
+// Называть интерфейсы прилагательными
+// Функц программирование
+// Enum

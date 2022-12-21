@@ -1,10 +1,10 @@
 package lab3.env;
 
-import lab3.EnvPattern;
+import lab3.EnvRoom;
 import lab3.Human;
 
-public class Cord extends EnvPattern {
-    public Cord(String name, EnvPattern[] env) {
+public class Cord extends EnvRoom {
+    public Cord(String name, EnvRoom[] env) {
         super(name, env);
     }
 

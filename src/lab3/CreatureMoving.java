@@ -1,5 +1,5 @@
 package lab3;
 
-public interface CreatureMoving extends Creature{
-    void move(EnvPattern e);
+public interface CreatureMoving{
+    void move(EnvRoom e);
 }

@@ -1,5 +1,5 @@
 package lab3;
 
-public interface CreatureTrembling extends Creature{
+public interface CreatureTrembling {
     void tremble();
 }

@@ -1,5 +1,5 @@
 package lab3;
 
-public interface CreatureSeeing extends Creature{
+public interface CreatureSeeing {
     void sight();
 }

@@ -4,17 +4,17 @@ import lab3.*;
 
 import java.util.Random;
 
-public class RoomWorld extends EnvPattern implements EnvInput, EnvOutput, World {
+public class RoomWorld extends EnvRoom implements EnvInput, EnvOutput, World {
     public Human[] humans;
 
-    public RoomWorld(String name, EnvPattern[] env, Human ... humans) {
+    public RoomWorld(String name, EnvRoom[] env, Human ... humans) {
         super(name, env);
         this.humans = humans;
     }
 
     @Override
     public void enter(CreatureMoving c) {
-        EnvPattern door = find("Входная дверь");
+        EnvRoom door = findEnv("Входная дверь");
 
         if (door instanceof Door) {
             ((Door)door).open();
@@ -26,7 +26,7 @@ public class RoomWorld extends EnvPattern implements EnvInput, EnvOutput, World 
 
     @Override
     public void leave(CreatureMoving c) {
-        EnvPattern door = find("Входная дверь");
+        EnvRoom door = findEnv("Входная дверь");
 
         if (door instanceof Door) {
             ((Door)door).open();
@@ -40,7 +40,7 @@ public class RoomWorld extends EnvPattern implements EnvInput, EnvOutput, World 
     public void touch(Human h) {
         System.out.println(h.getName() +
                 " зачем-то прикоснулся к комнате\nКомната сочла это приятным и возбудилась");
-        find().touch(h);
+        findEnv().touch(h);
     }
 
     private void separate() {
@@ -48,10 +48,10 @@ public class RoomWorld extends EnvPattern implements EnvInput, EnvOutput, World 
     }
 
     public void simulate(int steps) {
-        if (find("Входная дверь") != null) {
+        if (findEnv("Входная дверь") != null) {
             for (int i = 0; i < steps; i++) {
                 // получаем случайную среду и случайного человека
-                EnvPattern rEnv = find();
+                EnvRoom rEnv = findEnv();
                 Human rHuman = humans[new Random().nextInt(humans.length)];
 
                 if(rHuman.getEnv() != null) {

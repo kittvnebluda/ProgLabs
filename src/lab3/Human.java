@@ -1,6 +1,6 @@
 package lab3;
 
-public abstract class Human implements CreatureSeeing, CreatureTrembling, CreatureMoving{
+public abstract class Human implements Creature, CreatureSeeing, CreatureTrembling, CreatureMoving{
     public Legs legs = new Legs();
     public Arms arms = new Arms();
 
@@ -8,7 +8,7 @@ public abstract class Human implements CreatureSeeing, CreatureTrembling, Creatu
 
     private String name;
 
-    private EnvPattern env;
+    private EnvRoom env;
 
     public Human(String name) {
         setName(name);
@@ -30,12 +30,12 @@ public abstract class Human implements CreatureSeeing, CreatureTrembling, Creatu
         this.name = name;
     }
 
-    public EnvPattern getEnv() {
+    public EnvRoom getEnv() {
         return env;
     }
 
     @Override
-    public void move(EnvPattern env) {
+    public void move(EnvRoom env) {
         this.env = env;
     }
 
