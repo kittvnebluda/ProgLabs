@@ -1,5 +1,5 @@
 package Lab34;
 
-public interface CreatureSeeing {
+public interface CanSee {
     void sight();
 }

@@ -1,5 +1,5 @@
 package Lab34;
 
-public interface Creature {
+public interface CanExplore {
     void explore() throws HumanInVoidException;
 }

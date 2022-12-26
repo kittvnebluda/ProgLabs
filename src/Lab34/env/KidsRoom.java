@@ -13,14 +13,8 @@ public class KidsRoom extends Env implements Enterable, Exitable, Simulatable {
         this.humans = humans;
     }
 
-    public static class NoEnteranceDoorError extends Error {
-        public NoEnteranceDoorError() {
-            super("Детская комната должна содержать входную дверь");
-        }
-    }
-
     @Override
-    public void enter(MobileCreature c) {
+    public void enter(CanMove c) {
         Env door = findEnv("Входная дверь");
 
         if (door instanceof Door) {
@@ -32,7 +26,7 @@ public class KidsRoom extends Env implements Enterable, Exitable, Simulatable {
     }
 
     @Override
-    public void leave(MobileCreature c) {
+    public void leave(CanMove c) {
         Env door = findEnv("Входная дверь");
 
         if (door instanceof Door) {
@@ -46,36 +40,36 @@ public class KidsRoom extends Env implements Enterable, Exitable, Simulatable {
     @Override
     public void touch(Human h) {
         System.out.println(h.getName() + " зачем-то прикоснулся к комнате\nКомната сочла это приятным и возбудилась");
-        //findEnv().touch(h);
     }
 
     private void separate() {
         System.out.println("-------------------------------");
     }
-    private void lowSeparate() {
+    private void separateTime() {
         System.out.println("-   -   -   -   -   -   -   -  ");
     }
 
     public void simulate(int steps) {
+        class NoEntranceDoorException extends RuntimeException {
+            public NoEntranceDoorException() {
+                super("Детская комната должна содержать входную дверь");
+            }
+        }
+
         if (findEnv("Входная дверь") != null) {
             separate();
             for (int i = 0; i < steps; i++) {
                 currentTime = currentTime.changeTime();
-                lowSeparate();
+                separateTime();
 
                 // получаем случайную среду и случайного человека
                 Env rEnv = findEnv();
                 Human rHuman = humans[new Random().nextInt(humans.length)];
 
+                // перемещаем человека и активируем среду
                 try {
-                    // перемещаем человека и активируем среду
-                    if (rHuman.legs.isBroken() || rHuman.arms.isBroken()) {
-                        rHuman.explore();
-                    }
-                    else {
-                        rHuman.explore();
-                        rHuman.move(rEnv);
-                    }
+                    rHuman.explore();
+                    if (!(rHuman.legs.isBroken() || rHuman.arms.isBroken())) rHuman.move(rEnv);
                 }
                 catch (HumanInVoidException e) {
                     System.out.println(e.getMessage());
@@ -91,6 +85,6 @@ public class KidsRoom extends Env implements Enterable, Exitable, Simulatable {
                 }
             }
 
-        } else throw new NoEnteranceDoorError();
+        } else throw new NoEntranceDoorException();
     }
 }

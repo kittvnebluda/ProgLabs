@@ -1,6 +1,6 @@
 package Lab34;
 
-public abstract class Human implements Creature, CreatureSeeing, CreatureTrembling, MobileCreature {
+public abstract class Human implements CanExplore, CanSee, CanTremble, CanMove {
     public Legs legs = new Legs();
     public Arms arms = new Arms();
 

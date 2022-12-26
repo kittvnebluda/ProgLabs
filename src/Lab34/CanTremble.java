@@ -1,5 +1,5 @@
 package Lab34;
 
-public interface CreatureTrembling {
+public interface CanTremble {
     void tremble();
 }

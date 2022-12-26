@@ -41,7 +41,7 @@ public class Window extends Env implements Exitable {
     }
 
     @Override
-    public void leave(MobileCreature c) {
+    public void leave(CanMove c) {
         System.out.println("Кто-то выпал из окна");
         if (c instanceof Human) ((Human)c).breakLegs();
         c.move(null);

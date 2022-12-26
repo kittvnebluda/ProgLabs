@@ -18,10 +18,6 @@ public class Main {
         Carlson carlson = new Carlson();
 
         KidsRoom roomWorld = new KidsRoom("Комната", new Env[]{door, windowCourt, windowStreet, cord}, frekenBock, kid, carlson);
-        roomWorld.simulate(8);
+        roomWorld.simulate(10);
     }
 }
-
-// Называть интерфейсы прилагательными
-// Функц программирование
-// Enum

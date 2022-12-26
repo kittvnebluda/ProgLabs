@@ -1,5 +1,5 @@
 package Lab34;
 
-public interface MobileCreature {
+public interface CanMove {
     void move(Env e);
 }
