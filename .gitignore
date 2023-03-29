@@ -3,7 +3,6 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 Labs.iml
-ProgrammingLabs.iml
 .idea/
 
 ### Eclipse ###

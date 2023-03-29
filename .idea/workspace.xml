@@ -4,26 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f01ca2dc-52e1-4188-b8b8-aa952b4b4351" name="Changes" comment="I think, it's completed">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f01ca2dc-52e1-4188-b8b8-aa952b4b4351" name="Changes" comment="Lab 3 done, working on lab 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/CreatureMoving.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/CreatureMoving.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/EnvInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/EnvInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/EnvOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/EnvOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/EnvPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/EnvRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Bell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Bell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Cord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Cord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/RoomWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/RoomWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/env/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/env/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/humans/FrekenBock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/humans/FrekenBock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/humans/Kid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/humans/Kid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/uml/env.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/uml/env.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/uml/humans.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/uml/humans.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/uml/lab3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/uml/lab3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/CanExplore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/CanExplore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/CanMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/CanMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/CanSee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/CanSee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/CanTremble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/CanTremble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/CurtainState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/CurtainState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Enterable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Enterable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Env.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Env.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Exitable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Exitable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Fear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Fear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/HumanBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/HumanBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/HumanInVoidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/HumanInVoidException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Simulatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Simulatable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/Touchable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/Touchable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/env/Bell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/env/Bell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/env/Cord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/env/Cord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/env/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/env/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/env/KidsRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/env/KidsRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/env/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/env/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/humans/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/humans/Carlson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/humans/FrekenBock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/humans/FrekenBock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/humans/Kid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/humans/Kid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab34/uml/Lab34.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3and4/uml/Lab34.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +43,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -70,7 +79,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab3.Main" />
       <module name="Labs" />
@@ -84,8 +93,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lab5.MainKt" />
+      <module name="Labs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -109,6 +126,12 @@
       <workItem from="1671051350452" duration="1017000" />
       <workItem from="1671118203259" duration="680000" />
       <workItem from="1671181522207" duration="1224000" />
+      <workItem from="1672131018749" duration="789000" />
+      <workItem from="1676145807900" duration="6646000" />
+      <workItem from="1676200133281" duration="16000" />
+      <workItem from="1676459148685" duration="9000" />
+      <workItem from="1680099977500" duration="1029000" />
+      <workItem from="1680110897047" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="Working on lab3">
       <created>1670964668385</created>
@@ -131,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671044919425</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lab 3 done, working on lab 4">
+      <created>1671631002249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671631002249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +182,8 @@
     <MESSAGE value="Working on lab3" />
     <MESSAGE value="." />
     <MESSAGE value="Welcome new interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Welcome new interfaces" />
+    <MESSAGE value="Lab 3 done, working on lab 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 3 done, working on lab 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

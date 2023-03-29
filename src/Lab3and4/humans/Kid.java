@@ -1,23 +1,23 @@
-package Lab34.humans;
+package Lab3and4.humans;
 
-import Lab34.Env;
-import Lab34.Fear;
-import Lab34.Human;
-import Lab34.HumanInVoidException;
-import Lab34.env.Cord;
+import Lab3and4.*;
+import Lab3and4.env.Cord;
+import Lab3and4.env.Window;
 
-public class FrekenBock extends Human {
-    public FrekenBock() {
-        super("Фрекен Бок");
+public class Kid extends Human {
+    public Kid() {
+        super("Малыш");
     }
     @Override
     public void tremble() {
-        System.out.println("Фрекен Бок затрепетала");
+        setFear(Fear.FEELING_GOOSEBUMPS);
+        System.out.println("Малыш затрепетал, как пойманная рыбка");
     }
 
     @Override
     public void sight() {
-        System.out.println("Фрекен Бок мрачно посмотрела");
+        setFear(Fear.ZERO);
+        System.out.println("Малыш мягко взглянул на Вас и успокоился");
     }
 
     @Override
@@ -26,30 +26,31 @@ public class FrekenBock extends Human {
         if(env != null) System.out.println(getName() + " переместился к " + env.getName());
         else System.out.println(getName() + " переместился в пустоту");
     }
+
     @Override
     public void explore() throws HumanInVoidException {
         if(getEnv() != null) {
             if (legs.isBroken()) {
-                if (Math.random() > .8) restoreLegs();
+                if (Math.random() > .5) restoreLegs();
                 else System.out.println(getName() + " не смог(ла) восстановить ноги");
             } else if (arms.isBroken()) {
-                if (Math.random() > .8) restoreArms();
+                if (Math.random() > .5) restoreArms();
                 else System.out.println(getName() + " не смог(ла) восстановить руки");
             } else {
                 getEnv().touch(this);
 
-                if(getEnv() instanceof Cord) {
+                if(getEnv() instanceof Window) {
+                    if(((Window) getEnv()).getCurtain() == CurtainState.OPENED) {
+                        System.out.println(" Малыш стоял у окна своей комнаты, глядел на звезды, мерцавшие над крышами.");
+                        sight();
+                    }
+                } else if(getEnv() instanceof Cord) {
                     System.out.println("Шнуры опасны");
                     breakArms();
                 } else {
                     if (Math.random() > .8) {
                         breakLegs();
                     }
-                }
-
-                if (getFear() != Fear.ZERO) {
-                    setFear(Fear.ZERO);
-                    System.out.println("Фрекен Бок успокоилась");
                 }
             }
         } else throw new HumanInVoidException();

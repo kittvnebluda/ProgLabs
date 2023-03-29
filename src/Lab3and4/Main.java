@@ -1,9 +1,9 @@
-package Lab34;
+package Lab3and4;
 
-import Lab34.env.*;
-import Lab34.humans.Carlson;
-import Lab34.humans.FrekenBock;
-import Lab34.humans.Kid;
+import Lab3and4.env.*;
+import Lab3and4.humans.Carlson;
+import Lab3and4.humans.FrekenBock;
+import Lab3and4.humans.Kid;
 
 public class Main {
     public static void main(String[] args) {

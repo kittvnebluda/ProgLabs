@@ -1,9 +1,9 @@
-package Lab34.humans;
+package Lab3and4.humans;
 
-import Lab34.Env;
-import Lab34.Fear;
-import Lab34.Human;
-import Lab34.HumanInVoidException;
+import Lab3and4.Env;
+import Lab3and4.Fear;
+import Lab3and4.Human;
+import Lab3and4.HumanInVoidException;
 
 public class Carlson extends Human {
     public Carlson() {

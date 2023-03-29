@@ -1,6 +1,6 @@
-package Lab34.env;
+package Lab3and4.env;
 
-import Lab34.*;
+import Lab3and4.*;
 
 import java.util.Random;
 

@@ -1,7 +1,7 @@
-package Lab34.env;
+package Lab3and4.env;
 
-import Lab34.Env;
-import Lab34.Human;
+import Lab3and4.Env;
+import Lab3and4.Human;
 
 public class Door extends Env {
     private boolean isOpen = false;

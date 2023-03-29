@@ -1,4 +1,4 @@
-package Lab34;
+package Lab3and4;
 
 public enum CurtainState {
     OPENED,

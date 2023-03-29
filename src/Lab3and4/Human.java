@@ -1,4 +1,4 @@
-package Lab34;
+package Lab3and4;
 
 public abstract class Human implements CanExplore, CanSee, CanTremble, CanMove {
     public Legs legs = new Legs();

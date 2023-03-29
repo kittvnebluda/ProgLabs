@@ -1,6 +1,6 @@
-package Lab34.env;
+package Lab3and4.env;
 
-import Lab34.*;
+import Lab3and4.*;
 
 public class Window extends Env implements Exitable {
     private CurtainState curtain = CurtainState.CLOSED;
